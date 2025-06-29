@@ -15,42 +15,66 @@
     }
     .hero {
       text-align: center;
-      padding: 60px 20px;
       background: linear-gradient(to bottom right, #cce7ff, #ffd6e7);
+      padding: 0;
+      position: relative;
     }
-    .hero h1 {
+    .hero img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      transform: scale(1.05);
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .overlay h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5em;
-      color: #2b4f81;
-      margin-bottom: 0.3em;
+      margin: 0;
     }
-    .tagline {
+    .overlay .tagline {
       font-style: italic;
-      color: #555;
+      font-size: 1.2em;
       margin-top: 10px;
     }
-    .rsvp-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #ff6699;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .floral {
-      margin: 20px auto;
-      max-width: 300px;
+    .story {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
   <div class="hero">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Flower_icon.svg/1024px-Flower_icon.svg.png" alt="Floral" class="floral">
-    <h1>Manthan Jhaveri & Shreya Shah</h1>
-    <div class="tagline">#IPOOfLove – Launched 15th Nov 2025</div>
-    <a href="#" class="rsvp-btn">RSVP Now</a>
+    <img src="Main Photo.jpeg" alt="Manthan & Shreya">
+    <div class="overlay">
+      <h1>Manthan Jhaveri & Shreya Shah</h1>
+      <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
+    </div>
+  </div>
+  <div class="story">
+    <h2>Our Story</h2>
+    <p>Some love stories are written in the stars. Ours began with a click.</p>
+    <p>On the first day of April 2024, a simple message on Shaadi.com sparked a connection between two worlds—Manthan, a thoughtful and analytical fund manager from Ahmedabad, and Shreya, a vibrant IT professional from the picturesque town of Baramati, working in Pune. What started as a digital introduction soon turned into something much more meaningful, magical, and real.</p>
+    <p>Despite the 500 kilometers between them, distance never stood a chance.</p>
+    <p>Manthan, who usually dealt with market graphs and numbers, began charting a new course—traveling frequently, sometimes twice a month for 10 days, from Ahmedabad to Pune. Each trip was not just a journey across cities, but steps toward a deeper understanding, heartfelt conversations, and countless shared smiles. With every visit, they built a relationship grounded in effort, love, and mutual respect.</p>
+    <p>Among all their moments, one special gift from Shreya truly touched Manthan's heart—a beautifully crafted frame with a photo of one of their most cherished memories. It wasn’t just a picture; it was a symbol of the journey they had started, and the emotion behind it made it unforgettable. It showed Manthan how much thought and care Shreya had already invested into their future.</p>
+    <p>And just when Shreya thought she knew all of Manthan’s sides, he left everyone stunned at their engagement on 14th June 2025 in Baramati. Manthan—yes, the same guy who had never danced at any family or friends' sangeet, who always stood at the edge of the dance floor—surprised her with a solo dance performance. It wasn’t about perfect moves, but perfect intent. He did it only for Shreya. That one performance said everything words couldn’t, and it became a moment that she—and everyone present—would never forget.</p>
+    <p>Now, as they prepare to say “I do” on 15th November 2025 in Ahmedabad, they invite you to celebrate the union of two hearts that met unexpectedly, stayed intentionally, and chose each other wholeheartedly.</p>
+    <p>This is not just a love story. It’s a journey of showing up, dancing through discomfort, gifting from the soul, and choosing love every single day.</p>
+    <p>Join us as we celebrate Manthan & Shreya, and the magic they created between miles, memories, and meaningful moments. 💍✨</p>
   </div>
 </body>
 </html>
