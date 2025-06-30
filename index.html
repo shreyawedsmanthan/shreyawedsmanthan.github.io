@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manthan & Shreya Wedding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Roboto', sans-serif; background:#fdf6f9; color:#333; }
+    header { position:fixed; top:0; left:0; padding:10px 20px; font-size:1.8em; cursor:pointer; z-index:10; }
+    nav { position:fixed; top:0; left:-200px; width:200px; height:100%; background:#fff; border-right:1px solid #ccc; padding:20px; box-shadow:2px 0 5px rgba(0,0,0,0.1); transition: left 0.3s; }
+    nav a { display:block; padding:10px 0; color:#2b4f81; text-decoration:none; }
+    .hero { text-align:center; position:relative; }
+    .hero img { width:100%; max-height:500px; object-fit:cover; }
+    .overlay {
+      position:absolute; top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.3);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      color:#fff;
+    }
+    .overlay h1 { font-family:'Playfair Display', serif; font-size:2.5em; margin:0; }
+    .overlay .tagline { font-style:italic; font-size:1.2em; margin-top:10px; }
+    .section { padding:60px 20px; max-width:800px; margin:0 auto; line-height:1.6; }
+    button.rsvp-btn {
+      background:#2b4f81; color:#fff; padding:15px 30px; border:none; font-size:1.2em; cursor:pointer; margin:20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header onclick="toggleMenu()">☰</header>
+<nav id="menu">
+  <a href="index.html">Home</a>
+  <a href="rsvp.html">RSVP</a>
+  <a href="event.html">Event Details</a>
+</nav>
+
+<div class="hero">
+  <img src="Main Photo.jpeg" alt="Manthan & Shreya">
+  <div class="overlay">
+    <h1>Manthan Jhaveri & Shreya Shah</h1>
+    <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Story</h2>
+  <p>Some love stories are written in the stars. Ours began with a click.</p>
+  <p>On the first day of April 2024, a simple message on Shaadi.com sparked a connection between two worlds—Manthan, a thoughtful and analytical fund manager from Ahmedabad, and Shreya, a vibrant IT professional from the picturesque town of Baramati, working in Pune. What started as a digital introduction soon turned into something much more meaningful, magical, and real.</p>
+  <p>Despite the 500 kilometers between them, distance never stood a chance...</p>
+  <!-- Add the full story as you shared earlier -->
+  <button class="rsvp-btn" onclick="window.location.href='rsvp.html'">RSVP Now</button>
+</div>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.left === "0px") {
+      menu.style.left = "-200px";
+    } else {
+      menu.style.left = "0px";
+    }
+  }
+</script>
+
+</body>
+</html>
+Add new index.html
