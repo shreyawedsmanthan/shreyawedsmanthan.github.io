@@ -46,6 +46,27 @@
   <a href="story.html"><button>Read Our Story</button></a>
   <a href="our-first-chapter.html"><button>Our First Chapter</button></a>
 </div>
+<div id="countdown" style="text-align:center; margin:30px 0; font-size:1.5em; color:#2b4f81;"></div>
+<script>
+  const weddingDate = new Date("November 15, 2025 19:00:00").getTime();
+  const countdown = document.getElementById("countdown");
+
+  const interval = setInterval(() => {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+
+    if (diff <= 0) {
+      countdown.innerHTML = "🎉 It's the big day!";
+      clearInterval(interval);
+    } else {
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      countdown.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s to go!`;
+    }
+  }, 1000);
+</script>
 
 </body>
 </html>
