@@ -7,8 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body { margin:0; font-family:'Roboto', sans-serif; background:#fdf6f9; color:#333; }
+    header { position:fixed; top:0; right:0; padding:10px 20px; font-size:1.8em; cursor:pointer; z-index:10; }
+    nav { display:none; position:fixed; top:50px; right:10px; background:#fff; border:1px solid #ccc; padding:10px; }
+    nav a { display:block; padding:5px 0; color:#2b4f81; text-decoration:none; }
     .hero { text-align:center; position:relative; }
-    .hero img { width:100%; max-height:500px; object-fit:cover; transform:scale(1.05); }
+    .hero img { width:100%; max-height:500px; object-fit:cover; }
     .overlay {
       position:absolute; top:0; left:0; right:0; bottom:0;
       background:rgba(0,0,0,0.3);
@@ -17,62 +20,75 @@
     }
     .overlay h1 { font-family:'Playfair Display', serif; font-size:2.5em; margin:0; }
     .overlay .tagline { font-style:italic; font-size:1.2em; margin-top:10px; }
-    .story, .event {
-      padding:40px 20px; max-width:800px; margin:0 auto; line-height:1.6;
+    .section {
+      padding:60px 20px; max-width:800px; margin:0 auto; line-height:1.6;
     }
-    .event h2 { color:#2b4f81; }
-    .map-container { text-align:center; margin-top:20px; }
+    button.rsvp-btn {
+      background:#2b4f81; color:#fff; padding:15px 30px; border:none; font-size:1.2em; cursor:pointer; margin:20px 0;
+    }
     iframe { width:100%; max-width:600px; height:300px; border:0; }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <img src="Main Photo.jpeg" alt="Manthan & Shreya">
-    <div class="overlay">
-      <h1>Manthan Jhaveri & Shreya Shah</h1>
-      <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
-    </div>
-  </div>
 
-  <div class="story">
-    <h2>Our Story</h2>
-    <p>Some love stories are written in the stars. Ours began with a click.</p>
-    <p>On the first day of April 2024, a simple message on Shaadi.com sparked a connection between two worlds—Manthan, a thoughtful and analytical fund manager from Ahmedabad, and Shreya, a vibrant IT professional from the picturesque town of Baramati, working in Pune. What started as a digital introduction soon turned into something much more meaningful, magical, and real.</p>
-    <p>Despite the 500 kilometers between them, distance never stood a chance.</p>
-    <p>Manthan, who usually dealt with market graphs and numbers, began charting a new course—traveling frequently, sometimes twice a month for 10 days, from Ahmedabad to Pune. Each trip was not just a journey across cities, but steps toward a deeper understanding, heartfelt conversations, and countless shared smiles. With every visit, they built a relationship grounded in effort, love, and mutual respect.</p>
-    <p>Among all their moments, one special gift from Shreya truly touched Manthan's heart—a beautifully crafted frame with a photo of one of their most cherished memories. It wasn’t just a picture; it was a symbol of the journey they had started, and the emotion behind it made it unforgettable. It showed Manthan how much thought and care Shreya had already invested into their future.</p>
-    <p>And just when Shreya thought she knew all of Manthan’s sides, he left everyone stunned at their engagement on 14th June 2025 in Baramati. Manthan—yes, the same guy who had never danced at any family or friends' sangeet, who always stood at the edge of the dance floor—surprised her with a solo dance performance. It wasn’t about perfect moves, but perfect intent. He did it only for Shreya. That one performance said everything words couldn’t, and it became a moment that she—and everyone present—would never forget.</p>
-    <p>Now, as they prepare to say “I do” on 15th November 2025 in Ahmedabad, they invite you to celebrate the union of two hearts that met unexpectedly, stayed intentionally, and chose each other wholeheartedly.</p>
-    <p>This is not just a love story. It’s a journey of showing up, dancing through discomfort, gifting from the soul, and choosing love every single day.</p>
-    <p>Join us as we celebrate Manthan & Shreya, and the magic they created between miles, memories, and meaningful moments. 💍✨</p>
-  </div>
+<header onclick="toggleMenu()">☰</header>
+<nav id="menu">
+  <a href="#home">Home</a>
+  <a href="#story">Our Story</a>
+  <a href="#rsvp">RSVP</a>
+  <a href="#event">Event Details</a>
+</nav>
 
-  <div class="event">
-    <h2>Event Details</h2>
-    <p><strong>Venue:</strong> Baghban Party Plot</p>
-    <p><strong>Address:</strong> Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059</p>
-    <p><strong>Ceremony:</strong> 15th Nov 2025, 7:00 PM onwards</p>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.912992847819!2d72.49517307593367!3d23.026082379170177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b17a2c83527%3A0x5b3a6c471ae8c6c0!2sBaghban%20Party%20Plot!5e0!3m2!1sen!2sin!4v1719730151695!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
-    </div>
+<div id="home" class="hero">
+  <img src="Main Photo.jpeg" alt="Manthan & Shreya">
+  <div class="overlay">
+    <h1>Manthan Jhaveri & Shreya Shah</h1>
+    <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
   </div>
+</div>
 
-  <div class="event">
-    <h2>RSVP</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <p><input type="text" name="name" placeholder="Your Full Name" required style="width:100%; padding:10px; margin:5px 0;"></p>
-      <p><input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:5px 0;"></p>
-      <p><input type="number" name="attendees" placeholder="Number of Attendees" min="1" max="50" required style="width:100%; padding:10px; margin:5px 0;"></p>
-      <p>
-        <select name="diet" required style="width:100%; padding:10px; margin:5px 0;">
-          <option value="">Select Dietary Preference</option>
-          <option value="Regular">Regular</option>
-          <option value="Jain">Jain</option>
-        </select>
-      </p>
-      <p><button type="submit" style="padding:10px 20px; background:#2b4f81; color:#fff; border:none; cursor:pointer;">Submit RSVP</button></p>
-    </form>
-  </div>
+<div id="story" class="section">
+  <h2>Our Story</h2>
+  <p>Some love stories are written in the stars. Ours began with a click...</p>
+  <!-- You can paste your full story text here as before -->
+  <button class="rsvp-btn" onclick="document.getElementById('rsvp').scrollIntoView({behavior:'smooth'})">RSVP Now</button>
+</div>
+
+<div id="rsvp" class="section">
+  <h2>RSVP</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <p><input type="text" name="name" placeholder="Your Full Name" required style="width:100%; padding:10px; margin:5px 0;"></p>
+    <p><input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:5px 0;"></p>
+    <p><input type="number" name="attendees" placeholder="Number of Attendees" min="1" max="50" required style="width:100%; padding:10px; margin:5px 0;"></p>
+    <p>
+      <select name="diet" required style="width:100%; padding:10px; margin:5px 0;">
+        <option value="">Select Dietary Preference</option>
+        <option value="Regular">Regular</option>
+        <option value="Jain">Jain</option>
+      </select>
+    </p>
+    <p><button type="submit" style="padding:10px 20px; background:#2b4f81; color:#fff; border:none;">Submit RSVP</button></p>
+  </form>
+</div>
+
+<div id="event" class="section">
+  <h2>Event Details</h2>
+  <p><strong>Venue:</strong> Baghban Party Plot</p>
+  <p><strong>Address:</strong> Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059</p>
+  <p><strong>Ceremony:</strong> 15th Nov 2025, 7:00 PM onwards</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.912992847819!2d72.49517307593367!3d23.026082379170177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b17a2c83527%3A0x5b3a6c471ae8c6c0!2sBaghban%20Party%20Plot!5e0!3m2!1sen!2sin!4v1719730151695!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+</div>
+
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+</script>
 
 </body>
 </html>
