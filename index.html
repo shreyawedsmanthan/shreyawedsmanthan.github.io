@@ -1,59 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Manthan & Shreya Wedding</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #fdf6f9;
-      color: #333;
-    }
-    .hero {
-      text-align: center;
-      background: linear-gradient(to bottom right, #cce7ff, #ffd6e7);
-      padding: 0;
-      position: relative;
-    }
-    .hero img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      transform: scale(1.05);
-    }
+    body { margin:0; font-family:'Roboto', sans-serif; background:#fdf6f9; color:#333; }
+    .hero { text-align:center; position:relative; }
+    .hero img { width:100%; max-height:500px; object-fit:cover; transform:scale(1.05); }
     .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
+      position:absolute; top:0; left:0; right:0; bottom:0;
+      background:rgba(0,0,0,0.3);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      color:#fff;
     }
-    .overlay h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      margin: 0;
+    .overlay h1 { font-family:'Playfair Display', serif; font-size:2.5em; margin:0; }
+    .overlay .tagline { font-style:italic; font-size:1.2em; margin-top:10px; }
+    .story, .event {
+      padding:40px 20px; max-width:800px; margin:0 auto; line-height:1.6;
     }
-    .overlay .tagline {
-      font-style: italic;
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-    .story {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
+    .event h2 { color:#2b4f81; }
+    .map-container { text-align:center; margin-top:20px; }
+    iframe { width:100%; max-width:600px; height:300px; border:0; }
   </style>
 </head>
 <body>
@@ -76,5 +45,15 @@
     <p>This is not just a love story. It’s a journey of showing up, dancing through discomfort, gifting from the soul, and choosing love every single day.</p>
     <p>Join us as we celebrate Manthan & Shreya, and the magic they created between miles, memories, and meaningful moments. 💍✨</p>
   </div>
+  <div class="event">
+    <h2>Event Details</h2>
+    <p><strong>Venue:</strong> Baghban Party Plot</p>
+    <p><strong>Address:</strong> Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059</p>
+    <p><strong>Ceremony:</strong> 15th Nov 2025, 7:00 PM onwards</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.912992847819!2d72.49517307593367!3d23.026082379170177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b17a2c83527%3A0x5b3a6c471ae8c6c0!2sBaghban%20Party%20Plot!5e0!3m2!1sen!2sin!4v1719730151695!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
 </body>
 </html>
+Update index.html with working map embed
