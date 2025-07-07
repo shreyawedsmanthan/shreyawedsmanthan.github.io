@@ -16,11 +16,13 @@
     .hero {
       position: relative;
       width: 100%;
+      height: 100vh;
+      overflow: hidden;
     }
 
     .hero img {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       object-fit: cover;
       display: block;
       filter: brightness(65%);
@@ -28,7 +30,7 @@
 
     .overlay {
       position: absolute;
-      top: 50%;
+      top: 55%;
       left: 5%;
       transform: translateY(-50%);
       color: white;
@@ -36,7 +38,7 @@
 
     .overlay h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin: 0;
       color: #fff;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
@@ -56,7 +58,7 @@
       background: linear-gradient(135deg, #ff99cc, #66ccff);
       color: white;
       font-weight: bold;
-      font-size: 1em;
+      font-size: 1.05em;
       border-radius: 50px;
       text-decoration: none;
       transition: all 0.3s ease;
@@ -84,29 +86,45 @@
       z-index: 1000;
     }
 
-    /* MOBILE ADJUSTMENTS */
     @media (max-width: 768px) {
-      .hero img {
-        height: 90vh;
+      .hero {
+        height: 85vh;
+      }
+
+      .overlay h1 {
+        font-size: 1.8em;
+      }
+
+      .buttons-container {
+        padding: 30px 15px;
+      }
+
+      .buttons-container a {
+        font-size: 0.95em;
+        padding: 12px 26px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        height: 80vh;
+      }
+
+      .overlay {
+        top: 60%;
       }
 
       .overlay h1 {
         font-size: 1.6em;
       }
 
-      .buttons-container a {
-        padding: 12px 24px;
-        font-size: 0.95em;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .overlay h1 {
-        font-size: 1.4em;
-      }
-
       .buttons-container {
-        padding: 30px 10px;
+        padding: 25px 10px;
+      }
+
+      .buttons-container a {
+        font-size: 0.9em;
+        padding: 10px 20px;
       }
     }
   </style>
