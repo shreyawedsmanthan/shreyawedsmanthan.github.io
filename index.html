@@ -11,7 +11,7 @@
       font-family: 'Roboto', sans-serif;
       background: url('floral-background.jpg.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #333;
+      color: #fff;
       text-align: center;
     }
 
@@ -28,24 +28,23 @@
 
     .overlay {
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.3);
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
     }
 
     .overlay h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
+      font-size: 2.2em;
       margin: 0;
-      color: white;
+      color: #fff;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
 
     .buttons-container {
-      margin: 30px 0 20px;
+      margin: 30px 0;
     }
 
     .buttons-container a {
@@ -64,12 +63,6 @@
     .buttons-container a:hover {
       opacity: 0.9;
       transform: scale(1.05);
-    }
-
-    #countdown {
-      margin: 20px 0 30px;
-      font-size: 1.5em;
-      color: #2b4f81;
     }
 
     .whatsapp-float {
@@ -91,7 +84,7 @@
 
     @media (max-width: 600px) {
       .overlay h1 {
-        font-size: 1.6em;
+        font-size: 1.5em;
       }
 
       .buttons-container a {
@@ -115,29 +108,6 @@
     <a href="our-first-chapter.html">Our First Chapter</a>
     <a href="invitation.html">View Invitation</a>
   </div>
-
-  <div id="countdown"></div>
-
-  <script>
-    const weddingDate = new Date("November 15, 2025 19:00:00").getTime();
-    const countdown = document.getElementById("countdown");
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const diff = weddingDate - now;
-
-      if (diff <= 0) {
-        countdown.innerHTML = "🎉 It's the big day!";
-        clearInterval(interval);
-      } else {
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-        countdown.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s to go!`;
-      }
-    }, 1000);
-  </script>
 
   <a href="https://wa.me/918780003746" target="_blank" class="whatsapp-float">💬</a>
 
