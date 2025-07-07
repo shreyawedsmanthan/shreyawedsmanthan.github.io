@@ -9,57 +9,60 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
+      background-color: #fdf6f9;
       color: #333;
-      background: linear-gradient(to bottom, white 60%, #fdf6f9 100%);
     }
 
     .hero {
+      text-align: center;
       position: relative;
-      width: 100%;
     }
 
     .hero img {
       width: 100%;
-      height: 100vh;
+      max-height: 420px; /* Slightly reduced */
       object-fit: cover;
-      display: block;
-      filter: brightness(65%);
+      object-position: center;
     }
 
     .overlay {
       position: absolute;
-      top: 50%;
-      left: 5%;
-      transform: translateY(-50%);
-      color: white;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fff;
     }
 
     .overlay h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
+      font-size: 2.4em;
       margin: 0;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      border: none;
     }
 
     .buttons-container {
       text-align: center;
-      padding: 40px 20px;
-      background: url('floral-background.jpg.jpg') no-repeat center center;
-      background-size: cover;
+      margin-top: 30px;
+      padding: 10px 20px 60px;
     }
 
     .buttons-container a {
       display: inline-block;
       margin: 10px;
-      padding: 14px 36px;
+      padding: 14px 28px;
       background: linear-gradient(135deg, #ff99cc, #66ccff);
       color: white;
-      font-weight: bold;
-      font-size: 1em;
       border-radius: 50px;
+      font-size: 1.1em;
+      font-weight: bold;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
     .buttons-container a:hover {
@@ -78,55 +81,44 @@
       height: 55px;
       text-align: center;
       font-size: 28px;
-      line-height: 55px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      line-height: 55px;
       text-decoration: none;
       z-index: 1000;
     }
 
-    /* MOBILE ADJUSTMENTS */
     @media (max-width: 768px) {
-      .hero img {
-        height: 90vh;
-      }
-
       .overlay h1 {
-        font-size: 1.6em;
+        font-size: 1.8em;
       }
 
       .buttons-container a {
+        font-size: 1em;
         padding: 12px 24px;
-        font-size: 0.95em;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .overlay h1 {
-        font-size: 1.4em;
       }
 
-      .buttons-container {
-        padding: 30px 10px;
+      .hero img {
+        max-height: 320px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <img src="Main Photo.jpeg" alt="Manthan & Shreya">
-    <div class="overlay">
-      <h1>Manthan Jhaveri & Shreya Shah</h1>
-    </div>
+<div class="hero">
+  <img src="Main Photo.jpeg" alt="Manthan & Shreya">
+  <div class="overlay">
+    <h1>Manthan Jhaveri & Shreya Shah</h1>
   </div>
+</div>
 
-  <div class="buttons-container">
-    <a href="story.html">Our Story</a>
-    <a href="our-first-chapter.html">Our First Chapter</a>
-    <a href="invitation.html">View Invitation</a>
-  </div>
+<div class="buttons-container">
+  <a href="story.html">Read Our Story</a>
+  <a href="our-first-chapter.html">Our First Chapter</a>
+  <a href="invitation.html">View Invitation</a>
+</div>
 
-  <a href="https://wa.me/918780003746" target="_blank" class="whatsapp-float">💬</a>
+<a href="https://wa.me/918780003746" target="_blank" class="whatsapp-float">💬</a>
 
 </body>
 </html>
