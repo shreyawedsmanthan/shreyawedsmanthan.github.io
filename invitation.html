@@ -3,115 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wedding Invitation - Manthan & Shreya</title>
+  <title>Manthan & Shreya Invitation</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('https://i.ibb.co/GF1zL7W/floral-bg.png') no-repeat center center / cover;
+      background: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center / cover;
       color: #333;
       text-align: center;
       padding: 30px;
     }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: auto;
+    }
+
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5em;
-      color: #ad1457;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
+      color: #b30059;
     }
+
     .tagline {
       font-style: italic;
-      color: #6a1b9a;
+      font-size: 1.2em;
+      color: #555;
       margin-bottom: 20px;
     }
-    .countdown {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
+
+    .timer {
+      font-size: 1.5em;
       margin: 20px 0;
-      flex-wrap: wrap;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #b30059, #ff66a3);
+      color: #fff;
     }
-    .countdown div {
-      background: rgba(255,255,255,0.8);
-      padding: 10px 15px;
-      border-radius: 10px;
-      font-weight: bold;
-      color: #4a148c;
-      min-width: 70px;
-    }
+
     .venue {
       font-size: 1.1em;
-      line-height: 1.5;
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
-    .qr img {
-      width: 100px;
-      height: 100px;
+
+    .qr {
+      margin: 20px 0;
     }
+
     .buttons {
       margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
     }
+
     .buttons a {
-      background: linear-gradient(45deg, #8e24aa, #f06292);
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 25px;
       text-decoration: none;
-      transition: 0.3s;
-      font-weight: bold;
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 30px;
+      background: #b30059;
+      color: #fff;
+      transition: background 0.3s ease;
     }
+
     .buttons a:hover {
-      opacity: 0.85;
+      background: #800040;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #b30059;
     }
   </style>
 </head>
 <body>
-  <h1>Manthan Jhaveri & Shreya Shah</h1>
-  <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
+  <div class="container">
+    <h1>Manthan Jhaveri & Shreya Shah</h1>
+    <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
-  <div class="countdown" id="countdown">
-    <div><span id="days">0</span><br>Days</div>
-    <div><span id="hours">0</span><br>Hours</div>
-    <div><span id="minutes">0</span><br>Minutes</div>
-    <div><span id="seconds">0</span><br>Seconds</div>
-  </div>
+    <div class="timer" id="countdown">Loading timer...</div>
 
-  <div class="venue">
-    <strong>Venue:</strong> Baghban Party Plot<br>
-    Thaltej - Shilaj Rd, near Silver Square,<br>
-    Thaltej, Ahmedabad, Gujarat - 380059
-  </div>
+    <div class="venue">
+      <strong>Venue:</strong> Baghban Party Plot<br/>
+      Thaltej - Shilaj Rd, near Silver Square,<br/>
+      Thaltej, Ahmedabad, Gujarat - 380059
+    </div>
 
-  <div class="qr">
-    <a href="https://g.co/kgs/e4XsELN" target="_blank">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://g.co/kgs/e4XsELN" alt="QR code for venue">
-    </a>
-    <div style="font-size: 0.9em;">Scan for directions</div>
-  </div>
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://g.co/kgs/e4XsELN" alt="QR Code for Venue">
+      <div>Scan for directions</div>
+    </div>
 
-  <div class="buttons">
-    <a href="index.html">Home</a>
-    <a href="rsvp.html">RSVP</a>
-    <a href="invitation.pdf" target="_blank">📄 Download PDF</a>
+    <div class="buttons">
+      <a href="index.html">Home</a>
+      <a href="https://formspree.io/f/xpwrbdvw">RSVP</a>
+      <a href="invitation.pdf" download>Download Invitation</a>
+    </div>
+
+    <div class="footer">
+      JHAVERI & SHAH Family Welcomes You!
+    </div>
   </div>
 
   <script>
-    const countdown = () => {
-      const eventDate = new Date("November 15, 2025 19:00:00").getTime();
-      const now = new Date().getTime();
-      const distance = eventDate - now;
+    // Countdown timer
+    const targetDate = new Date("2025-11-15T19:00:00").getTime();
 
-      document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-      document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
-    };
-    setInterval(countdown, 1000);
+    const countdownEl = document.getElementById("countdown");
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        countdownEl.innerHTML = "The celebration has begun!";
+      }
+    }, 1000);
   </script>
 </body>
 </html>
