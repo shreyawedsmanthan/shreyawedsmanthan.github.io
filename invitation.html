@@ -4,181 +4,187 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wedding Invitation - Manthan & Shreya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background: url('floral-background.jpg.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #2d2d2d;
-    }
-
-    .container {
+      color: #333;
       text-align: center;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.85);
-      margin: 30px auto;
-      border-radius: 20px;
-      max-width: 700px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2em;
-      margin-bottom: 10px;
+      font-size: 2.5em;
+      color: #b30059;
+      margin-bottom: 0.3em;
     }
 
-    .countdown {
+    .tagline {
+      font-style: italic;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+      color: #555;
+    }
+
+    .timer {
       display: flex;
       justify-content: center;
       gap: 15px;
       margin: 20px 0;
+      flex-wrap: wrap;
     }
 
-    .countdown div {
-      background: #f4c2c2;
-      padding: 15px;
+    .timer div {
+      background: linear-gradient(135deg, #ff99cc, #66ccff);
+      color: #fff;
+      padding: 15px 20px;
       border-radius: 10px;
-      font-size: 1.2em;
-      min-width: 60px;
+      min-width: 80px;
+      font-weight: bold;
+      font-size: 1em;
     }
 
     .venue {
+      font-size: 1.1em;
       margin: 20px 0;
-    }
-
-    .venue p {
-      margin: 5px 0;
-      font-weight: 500;
+      line-height: 1.6;
     }
 
     .qr {
-      margin: 20px 0;
-    }
-
-    .qr img {
-      width: 100px;
-      height: 100px;
-    }
-
-    .welcome {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5em;
-      margin-top: 25px;
-      font-weight: bold;
-      color: #b03c6f;
+      margin: 20px auto;
+      width: 150px;
+      height: 150px;
     }
 
     .buttons {
-      margin-top: 30px;
+      margin-top: 25px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     .buttons a {
-      padding: 12px 20px;
-      background-color: #ff85a2;
-      color: white;
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #ff99cc, #66ccff);
+      color: #fff;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 50px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      transition: 0.3s;
     }
 
     .buttons a:hover {
-      background-color: #d96b8a;
+      opacity: 0.85;
+      transform: scale(1.05);
     }
 
-    .download-icon {
-      margin-top: 20px;
+    .family {
+      margin-top: 30px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #b30059;
     }
 
-    .download-icon img {
-      width: 35px;
-      cursor: pointer;
-    }
-
-    .whatsapp {
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 1000;
-    }
-
-    .whatsapp img {
-      width: 45px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      text-align: center;
+      font-size: 28px;
+      line-height: 55px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 100;
+      text-decoration: none;
     }
 
     @media (max-width: 600px) {
-      .countdown {
-        flex-direction: column;
-        align-items: center;
+      h1 {
+        font-size: 2em;
       }
 
-      .buttons {
-        flex-direction: column;
-        gap: 10px;
+      .timer div {
+        min-width: 70px;
+        font-size: 0.9em;
       }
 
-      .container {
-        margin: 15px;
+      .qr {
+        width: 120px;
+        height: 120px;
+      }
+
+      .buttons a {
+        padding: 10px 20px;
+        font-size: 0.95em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>You are invited to the Wedding of</h1>
-    <h1>Manthan & Shreya</h1>
-    
-    <div class="countdown" id="countdown">
-      <div><span id="days">00</span><br>Days</div>
-      <div><span id="hours">00</span><br>Hours</div>
-      <div><span id="minutes">00</span><br>Minutes</div>
-      <div><span id="seconds">00</span><br>Seconds</div>
-    </div>
 
-    <div class="venue">
-      <p><strong>Venue:</strong> Baghban Party Plot</p>
-      <p>Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad</p>
-      <p><strong>Date & Time:</strong> 15th November 2025 | 7:00 PM onwards</p>
-    </div>
+  <h1>Manthan Jhaveri & Shreya Shah</h1>
+  <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
-    <div class="qr">
-      <p>Scan for Directions</p>
-      <a href="https://g.co/kgs/e4XsELN" target="_blank">
-        <img src="qr-code.png" alt="QR Code for Venue">
-      </a>
-    </div>
-
-    <div class="welcome">JHAVERI & SHAH FAMILY WELCOMES YOU!</div>
-
-    <div class="buttons">
-      <a href="index.html">Home</a>
-      <a href="invitation.pdf" target="_blank">Download Invitation</a>
-    </div>
+  <div class="timer" id="timer">
+    <div><span id="days">0</span><br>Days</div>
+    <div><span id="hours">0</span><br>Hours</div>
+    <div><span id="minutes">0</span><br>Minutes</div>
+    <div><span id="seconds">0</span><br>Seconds</div>
   </div>
 
-  <div class="whatsapp">
-    <a href="https://wa.me/919999999999" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    </a>
+  <div class="venue">
+    <strong>Venue:</strong><br>
+    Baghban Party Plot<br>
+    Thaltej - Shilaj Rd, near Silver Square, Thaltej,<br>
+    Ahmedabad, Gujarat - 380059
   </div>
+
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goo.gl/maps/38fBStTyr5J9VctF8" alt="QR Code for directions" class="qr">
+  <div>Scan for directions</div>
+
+  <div class="buttons">
+    <a href="index.html">Home</a>
+    <a href="https://formspree.io/f/xpwrbdvw" target="_blank">RSVP</a>
+    <a href="invitation.pdf" download>Download Invitation</a>
+  </div>
+
+  <div class="family">Jhaveri & Shah Family Welcomes You!</div>
+
+  <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-float">💬</a>
 
   <script>
-    const countDownDate = new Date("Nov 15, 2025 19:00:00").getTime();
-    const x = setInterval(function () {
+    const targetDate = new Date("2025-11-15T19:00:00").getTime();
+    const timerFunc = setInterval(() => {
       const now = new Date().getTime();
-      const distance = countDownDate - now;
+      const diff = targetDate - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      if (diff < 0) {
+        clearInterval(timerFunc);
+        document.getElementById("timer").innerHTML = "<div>It's time to celebrate!</div>";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
       document.getElementById("days").innerText = days;
       document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes")
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }, 1000);
+  </script>
+</body>
+</html>
