@@ -2,133 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Wedding Invitation - Manthan & Shreya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manthan weds Shreya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #fff8f0 url('https://i.ibb.co/GF1zL7W/floral-bg.png') no-repeat center top / cover;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe4ec, #e0f7fa);
+      background-attachment: fixed;
+      color: #333;
     }
     .container {
-      max-width: 800px;
+      max-width: 600px;
       margin: auto;
       padding: 20px;
-      text-align: center;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.85);
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      margin-top: 20px;
-    }
-    header {
-      text-align: left;
-      padding: 10px 20px;
-    }
-    header a {
-      text-decoration: none;
-      color: #c2185b;
-      font-weight: bold;
-      font-size: 1.1em;
-      background: #ffe4e1;
-      padding: 6px 12px;
-      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
     }
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin: 0;
-      color: #c2185b;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
     }
-    h1 span {
-      font-style: italic;
-    }
-    .tagline {
-      font-style: italic;
-      font-size: 1.2em;
-      margin-bottom: 20px;
-      color: #6a1b9a;
+    h2 {
+      font-size: 1em;
+      font-weight: 500;
+      margin: 0.5em 0;
     }
     .countdown {
-      font-size: 1.5em;
-      margin: 20px 0;
-      background: #fce4ec;
+      background: #f8bbd0;
       display: inline-block;
       padding: 10px 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #f8bbd0;
+      border-radius: 10px;
+      margin: 10px 0;
     }
     .venue {
-      font-size: 1.1em;
-      margin: 20px 0;
+      font-size: 0.9em;
+    }
+    .buttons {
+      margin-top: 15px;
+    }
+    .button {
+      background: linear-gradient(45deg, #f06292, #ba68c8);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      opacity: 0.9;
+    }
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+    }
+    .download-icon {
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
     }
     iframe {
       width: 100%;
-      max-width: 600px;
-      height: 300px;
-      border: none;
+      border: 0;
       border-radius: 10px;
-    }
-    .btn-group {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .fancy-btn {
-      background: linear-gradient(45deg, #42a5f5, #f48fb1);
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      text-decoration: none;
-      display: inline-block;
-    }
-    .fancy-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="index.html">← Home</a>
-  </header>
   <div class="container">
-    <h1>Manthan <span>weds</span> Shreya</h1>
-    <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
-    <div class="countdown" id="countdown">Loading countdown...</div>
-    <div class="venue">
-      <strong>Venue:</strong> Baghban Party Plot<br>
-      Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
-    </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.912992847819!2d72.49517307593367!3d23.026082379170177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b17a2c83527%3A0x5b3a6c471ae8c6c0!2sBaghban%20Party%20Plot!5e0!3m2!1sen!2sin!4v1719730151695!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
-    <div class="btn-group">
-      <a href="https://formspree.io/f/xpwrbdvw" class="fancy-btn">RSVP</a>
-      <a href="#" class="fancy-btn">Save to Calendar</a>
-      <a href="#" class="fancy-btn">Contact</a>
+    <h1>Manthan weds Shreya</h1>
+    <h2>#IPOOfLove — Launching on 15th Nov 2025</h2>
+    <div class="countdown">131 days | 5 hrs | 0 min | 11 sec</div>
+    <p class="venue">
+      Venue: Baghban Party Plot <br />
+      Thaltej - Shilaj Rd, near Silver Square, Thaltej,<br />
+      Ahmedabad, Gujarat - 380059
+    </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5284931456347!2d72.511792875131!3d23.07847077913469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84b8df4f5d05%3A0x2b1b1e6f8a9a71f0!2sBaghban%20Party%20Plot!5e0!3m2!1sen!2sin!4v1686319600000!5m2!1sen!2sin" height="250" allowfullscreen=""></iframe>
+    <div class="buttons">
+      <a href="#rsvp" class="button">RSVP</a>
+      <a href="index.html" class="button">Home</a>
+      <a href="invitation.pdf" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Download Invitation" class="download-icon" />
+      </a>
     </div>
   </div>
-
-  <script>
-    const weddingDate = new Date("November 15, 2025 19:00:00").getTime();
-    const countdownEl = document.getElementById("countdown");
-    setInterval(() => {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownEl.innerHTML = `${days} days | ${hours} hrs | ${minutes} min | ${seconds} sec`;
-    }, 1000);
-  </script>
+  <a href="https://wa.me/919999999999" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" class="whatsapp-icon" />
+  </a>
 </body>
 </html>
