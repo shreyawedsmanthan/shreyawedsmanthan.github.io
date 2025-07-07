@@ -10,113 +10,108 @@
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background: url('https://i.ibb.co/GF1zL7W/floral-bg.png') no-repeat center center / cover;
-      min-height: 100vh;
       color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .invitation-box {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 700px;
       text-align: center;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      padding: 30px;
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.8em;
+      font-size: 2.5em;
       color: #ad1457;
       margin-bottom: 10px;
     }
     .tagline {
       font-style: italic;
-      font-size: 1.2em;
       color: #6a1b9a;
       margin-bottom: 20px;
     }
     .countdown {
-      font-size: 1.5em;
-      color: #fff;
-      background: linear-gradient(45deg, #8e24aa, #f06292);
-      padding: 12px 20px;
-      border-radius: 30px;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
       margin: 20px 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      flex-wrap: wrap;
+    }
+    .countdown div {
+      background: rgba(255,255,255,0.8);
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #4a148c;
+      min-width: 70px;
     }
     .venue {
-      margin: 20px 0;
       font-size: 1.1em;
-      line-height: 1.6;
-    }
-    .qr {
-      margin: 10px 0;
+      line-height: 1.5;
+      margin-bottom: 20px;
     }
     .qr img {
       width: 100px;
       height: 100px;
     }
-    .pdf-download {
+    .buttons {
       margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
-    .pdf-download a {
-      background: #42a5f5;
-      color: white;
+    .buttons a {
+      background: linear-gradient(45deg, #8e24aa, #f06292);
+      color: #fff;
       padding: 10px 20px;
       border-radius: 25px;
       text-decoration: none;
-      transition: 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      transition: 0.3s;
+      font-weight: bold;
     }
-    .pdf-download a:hover {
-      background: #1e88e5;
+    .buttons a:hover {
+      opacity: 0.85;
     }
   </style>
 </head>
 <body>
-  <div class="invitation-box">
-    <h1>Manthan Jhaveri & Shreya Shah</h1>
-    <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
-    
-    <div class="countdown" id="countdown">Loading countdown...</div>
+  <h1>Manthan Jhaveri & Shreya Shah</h1>
+  <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
-    <div class="venue">
-      <strong>Venue:</strong> Baghban Party Plot<br>
-      Thaltej - Shilaj Rd, near Silver Square,<br>
-      Thaltej, Ahmedabad, Gujarat - 380059
-    </div>
+  <div class="countdown" id="countdown">
+    <div><span id="days">0</span><br>Days</div>
+    <div><span id="hours">0</span><br>Hours</div>
+    <div><span id="minutes">0</span><br>Minutes</div>
+    <div><span id="seconds">0</span><br>Seconds</div>
+  </div>
 
-    <div class="qr">
-      <a href="https://g.co/kgs/e4XsELN" target="_blank">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://g.co/kgs/e4XsELN" alt="Venue QR Code">
-      </a>
-      <div style="font-size: 0.9em;">Scan for directions</div>
-    </div>
+  <div class="venue">
+    <strong>Venue:</strong> Baghban Party Plot<br>
+    Thaltej - Shilaj Rd, near Silver Square,<br>
+    Thaltej, Ahmedabad, Gujarat - 380059
+  </div>
 
-    <div class="pdf-download">
-      <a href="invitation.pdf" target="_blank">
-        📄 Download Invitation
-      </a>
-    </div>
+  <div class="qr">
+    <a href="https://g.co/kgs/e4XsELN" target="_blank">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://g.co/kgs/e4XsELN" alt="QR code for venue">
+    </a>
+    <div style="font-size: 0.9em;">Scan for directions</div>
+  </div>
+
+  <div class="buttons">
+    <a href="index.html">Home</a>
+    <a href="rsvp.html">RSVP</a>
+    <a href="invitation.pdf" target="_blank">📄 Download PDF</a>
   </div>
 
   <script>
-    const weddingDate = new Date("November 15, 2025 19:00:00").getTime();
-    const countdownEl = document.getElementById("countdown");
-    setInterval(() => {
+    const countdown = () => {
+      const eventDate = new Date("November 15, 2025 19:00:00").getTime();
       const now = new Date().getTime();
-      const distance = weddingDate - now;
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
+      const distance = eventDate - now;
+
+      document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+    };
+    setInterval(countdown, 1000);
   </script>
 </body>
 </html>
