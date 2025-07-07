@@ -3,99 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manthan & Shreya Invitation</title>
+  <title>Wedding Invitation - Manthan & Shreya</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('https://www.toptal.com/designers/subtlepatterns/patterns/flower-pattern.png') repeat, #ffeef8;
+      background: url('floral-background.jpg.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
-      text-align: center;
-      padding: 30px;
     }
-
     .container {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.85);
+      margin: 20px auto;
       padding: 30px;
       border-radius: 15px;
-      max-width: 750px;
-      margin: auto;
+      max-width: 800px;
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      text-align: center;
     }
-
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.8em;
-      margin-bottom: 5px;
+      font-size: 2.5em;
       color: #b30059;
+      margin-bottom: 0.3em;
     }
-
     .tagline {
       font-style: italic;
-      font-size: 1.3em;
+      font-size: 1.2em;
+      margin-bottom: 1em;
       color: #555;
-      margin-bottom: 20px;
     }
-
     .timer {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 15px;
       margin: 20px 0;
       flex-wrap: wrap;
     }
-
-    .time-box {
-      background: linear-gradient(45deg, #ff66a3, #66b3ff);
+    .timer div {
+      background: #b30059;
       color: #fff;
+      padding: 15px 20px;
       border-radius: 10px;
-      padding: 10px 20px;
-      min-width: 70px;
+      min-width: 80px;
     }
-
-    .time-box .value {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-
-    .time-box .label {
-      font-size: 0.8em;
-      text-transform: uppercase;
-    }
-
     .venue {
       font-size: 1.1em;
       margin: 20px 0;
     }
-
     .qr {
-      margin: 20px 0;
+      margin: 20px auto;
+      width: 150px;
+      height: 150px;
     }
-
     .buttons {
       margin-top: 20px;
     }
-
     .buttons a {
-      text-decoration: none;
       display: inline-block;
-      padding: 10px 20px;
-      margin: 5px;
-      border-radius: 30px;
-      background: linear-gradient(45deg, #ff66a3, #66b3ff);
+      margin: 10px;
+      padding: 12px 25px;
+      background: #b30059;
       color: #fff;
-      transition: transform 0.3s ease;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
     }
-
     .buttons a:hover {
-      transform: scale(1.1);
+      background: #800040;
     }
-
-    .footer {
+    .family {
       margin-top: 30px;
       font-family: 'Playfair Display', serif;
-      font-size: 1.5em;
+      font-size: 1.4em;
+      font-weight: bold;
       color: #b30059;
     }
   </style>
@@ -105,64 +87,51 @@
     <h1>Manthan Jhaveri & Shreya Shah</h1>
     <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
-    <div class="timer" id="countdown">
-      <div class="time-box">
-        <div class="value" id="days">0</div>
-        <div class="label">Days</div>
-      </div>
-      <div class="time-box">
-        <div class="value" id="hours">0</div>
-        <div class="label">Hours</div>
-      </div>
-      <div class="time-box">
-        <div class="value" id="minutes">0</div>
-        <div class="label">Minutes</div>
-      </div>
-      <div class="time-box">
-        <div class="value" id="seconds">0</div>
-        <div class="label">Seconds</div>
-      </div>
+    <div class="timer" id="timer">
+      <div><span id="days">0</span><br>Days</div>
+      <div><span id="hours">0</span><br>Hours</div>
+      <div><span id="minutes">0</span><br>Minutes</div>
+      <div><span id="seconds">0</span><br>Seconds</div>
     </div>
 
     <div class="venue">
-      <strong>Venue:</strong> Baghban Party Plot<br/>
-      Thaltej - Shilaj Rd, near Silver Square,<br/>
-      Thaltej, Ahmedabad, Gujarat - 380059
+      <strong>Venue:</strong> Baghban Party Plot<br>
+      Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
     </div>
 
-    <div class="qr">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://g.co/kgs/e4XsELN" alt="QR Code for Venue">
-      <div>Scan for directions</div>
-    </div>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goo.gl/maps/38fBStTyr5J9VctF8" alt="QR Code for directions" class="qr">
+    <div>Scan for directions</div>
 
     <div class="buttons">
-      <a href="index.html">Home</a>
-      <a href="https://formspree.io/f/xpwrbdvw">RSVP</a>
-      <a href="invitation.pdf" download>Download Invitation</a>
+      <a href="index.html">🏠 Home</a>
+      <a href="https://formspree.io/f/xpwrbdvw">📌 RSVP</a>
+      <a href="invitation.pdf" download>📄 Download Invitation</a>
     </div>
 
-    <div class="footer">
-      💐 JHAVERI & SHAH Family Welcomes You 💐
-    </div>
+    <div class="family">Jhaveri & Shah Family Welcomes You!</div>
   </div>
 
   <script>
     const targetDate = new Date("2025-11-15T19:00:00").getTime();
-
-    setInterval(() => {
+    const timerFunc = setInterval(() => {
       const now = new Date().getTime();
-      const distance = targetDate - now;
+      const diff = targetDate - now;
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      if (diff < 0) {
+        clearInterval(timerFunc);
+        document.getElementById("timer").innerHTML = "<div>It's time to celebrate!</div>";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
       document.getElementById("days").innerText = days;
       document.getElementById("hours").innerText = hours;
       document.getElementById("minutes").innerText = minutes;
       document.getElementById("seconds").innerText = seconds;
-
     }, 1000);
   </script>
 </body>
