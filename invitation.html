@@ -12,15 +12,8 @@
       background: url('floral-background.jpg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
-    }
-    .container {
-      background: rgba(255, 255, 255, 0.85);
-      margin: 20px auto;
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 800px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
       text-align: center;
+      padding: 20px;
     }
     h1 {
       font-family: 'Playfair Display', serif;
@@ -83,36 +76,53 @@
       font-weight: bold;
       color: #b30059;
     }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 60px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 100;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Manthan Jhaveri & Shreya Shah</h1>
-    <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
-    <div class="timer" id="timer">
-      <div><span id="days">0</span><br>Days</div>
-      <div><span id="hours">0</span><br>Hours</div>
-      <div><span id="minutes">0</span><br>Minutes</div>
-      <div><span id="seconds">0</span><br>Seconds</div>
-    </div>
+  <h1>Manthan Jhaveri & Shreya Shah</h1>
+  <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
-    <div class="venue">
-      <strong>Venue:</strong> Baghban Party Plot<br>
-      Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
-    </div>
-
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goo.gl/maps/38fBStTyr5J9VctF8" alt="QR Code for directions" class="qr">
-    <div>Scan for directions</div>
-
-    <div class="buttons">
-      <a href="index.html">Home</a>
-      <a href="https://formspree.io/f/xpwrbdvw">RSVP</a>
-      <a href="invitation.pdf" download>Download Invitation</a>
-    </div>
-
-    <div class="family">Jhaveri & Shah Family Welcomes You!</div>
+  <div class="timer" id="timer">
+    <div><span id="days">0</span><br>Days</div>
+    <div><span id="hours">0</span><br>Hours</div>
+    <div><span id="minutes">0</span><br>Minutes</div>
+    <div><span id="seconds">0</span><br>Seconds</div>
   </div>
+
+  <div class="venue">
+    <strong>Venue:</strong> Baghban Party Plot<br>
+    Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
+  </div>
+
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goo.gl/maps/38fBStTyr5J9VctF8" alt="QR Code for directions" class="qr">
+  <div>Scan for directions</div>
+
+  <div class="buttons">
+    <a href="index.html">Home</a>
+    <a href="https://formspree.io/f/xpwrbdvw">RSVP</a>
+    <a href="invitation.pdf" download>Download Invitation</a>
+  </div>
+
+  <div class="family">Jhaveri & Shah Family Welcomes You!</div>
+
+  <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-float">💬</a>
 
   <script>
     const targetDate = new Date("2025-11-15T19:00:00").getTime();
