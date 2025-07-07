@@ -11,140 +11,121 @@
       font-family: 'Roboto', sans-serif;
       background: url('floral-background.jpg.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #333;
+      color: #fff;
       text-align: center;
+    }
+    .container {
+      background-color: rgba(0,0,0,0.5);
       padding: 20px;
+      min-height: 100vh;
     }
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5em;
-      color: #b30059;
-      margin-bottom: 0.3em;
-    }
-    .tagline {
-      font-style: italic;
-      font-size: 1.2em;
-      margin-bottom: 1em;
-      color: #555;
+      margin-bottom: 0.5em;
     }
     .timer {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin: 20px 0;
+      gap: 10px;
+      margin-bottom: 1em;
       flex-wrap: wrap;
     }
-    .timer div {
-      background: linear-gradient(135deg, #ff99cc, #66ccff);
-      color: #fff;
-      padding: 15px 20px;
+    .time-box {
+      background: rgba(255, 192, 203, 0.3);
+      padding: 10px 15px;
       border-radius: 10px;
-      min-width: 80px;
+    }
+    .time-box span {
+      display: block;
+      font-size: 1.5em;
       font-weight: bold;
-    }
-    .venue {
-      font-size: 1.1em;
-      margin: 20px 0;
-    }
-    .qr {
-      margin: 20px auto;
-      width: 150px;
-      height: 150px;
     }
     .buttons {
-      margin-top: 20px;
+      margin: 1em 0;
     }
-    .buttons a {
+    .button {
       display: inline-block;
-      margin: 10px;
-      padding: 12px 30px;
-      background: linear-gradient(135deg, #ff99cc, #66ccff);
+      padding: 10px 20px;
+      margin: 5px;
+      background: #ff69b4;
       color: #fff;
+      border: none;
+      border-radius: 25px;
       text-decoration: none;
-      border-radius: 50px;
       font-weight: bold;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
-    .buttons a:hover {
-      opacity: 0.8;
-      transform: scale(1.05);
+    .button:hover {
+      background: #ff1493;
     }
-    .family {
-      margin-top: 30px;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4em;
-      font-weight: bold;
-      color: #b30059;
+    .qr {
+      margin-top: 1em;
     }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      text-align: center;
-      font-size: 30px;
-      line-height: 60px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      z-index: 100;
-      text-decoration: none;
+    .download-icon {
+      margin-top: 1em;
+    }
+    .download-icon img {
+      width: 40px;
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Manthan Jhaveri & Shreya Shah</h1>
+    <p>#IPOOfLove – Launching on 15th Nov 2025</p>
+    
+    <div class="timer">
+      <div class="time-box"><span id="days">00</span>Days</div>
+      <div class="time-box"><span id="hours">00</span>Hours</div>
+      <div class="time-box"><span id="minutes">00</span>Minutes</div>
+      <div class="time-box"><span id="seconds">00</span>Seconds</div>
+    </div>
 
-  <h1>Manthan Jhaveri & Shreya Shah</h1>
-  <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
+    <p><strong>Venue:</strong> Baghban Party Plot</p>
+    <p>Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059</p>
 
-  <div class="timer" id="timer">
-    <div><span id="days">0</span><br>Days</div>
-    <div><span id="hours">0</span><br>Hours</div>
-    <div><span id="minutes">0</span><br>Minutes</div>
-    <div><span id="seconds">0</span><br>Seconds</div>
+    <div class="qr">
+      <img src="qr-code.png" alt="Venue QR Code" width="150">
+    </div>
+
+    <div class="buttons">
+      <a href="index.html" class="button">Home</a>
+      <a href="rsvp.html" class="button">RSVP</a>
+    </div>
+
+    <div class="download-icon">
+      <a href="invitation.pdf" download>
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Download Invitation PDF">
+      </a>
+    </div>
+
+    <p style="font-family: 'Playfair Display', serif; font-size: 1.5em; margin-top: 1em;">
+      <strong>Jhaveri & Shah Family Welcomes You!</strong>
+    </p>
   </div>
-
-  <div class="venue">
-    <strong>Venue:</strong> Baghban Party Plot<br>
-    Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
-  </div>
-
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goo.gl/maps/38fBStTyr5J9VctF8" alt="QR Code for directions" class="qr">
-  <div>Scan for directions</div>
-
-  <div class="buttons">
-    <a href="index.html">Home</a>
-    <a href="https://formspree.io/f/xpwrbdvw">RSVP</a>
-    <a href="invitation.pdf" download>Download Invitation</a>
-  </div>
-
-  <div class="family">Jhaveri & Shah Family Welcomes You!</div>
-
-  <a href="https://wa.me/919999999999" target="_blank" class="whatsapp-float">💬</a>
 
   <script>
-    const targetDate = new Date("2025-11-15T19:00:00").getTime();
-    const timerFunc = setInterval(() => {
+    const weddingDate = new Date("Nov 15, 2025 19:00:00").getTime();
+    const x = setInterval(function() {
       const now = new Date().getTime();
-      const diff = targetDate - now;
+      const distance = weddingDate - now;
 
-      if (diff < 0) {
-        clearInterval(timerFunc);
-        document.getElementById("timer").innerHTML = "<div>It's time to celebrate!</div>";
-        return;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = String(days).padStart(2, '0');
+      document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".timer").innerHTML = "🎉 It's Wedding Time! 🎉";
       }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
     }, 1000);
   </script>
 </body>
