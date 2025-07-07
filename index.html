@@ -3,148 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manthan & Shreya Wedding</title>
+  <title>Wedding Invitation - Manthan Weds Shreya</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
+      background: url('floral-background.jpg.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
-      background: linear-gradient(to bottom, white 60%, #fdf6f9 100%);
+      text-align: center;
+      padding: 20px;
     }
 
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: brightness(65%);
-    }
-
-    .overlay {
-      position: absolute;
-      top: 55%;
-      left: 5%;
-      transform: translateY(-50%);
-      color: white;
-    }
-
-    .overlay h1 {
+    h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8em;
-      margin: 0;
+      background: linear-gradient(90deg, #b30059, #ff99cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+      letter-spacing: 1px;
+      margin-bottom: 0.3em;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+      color: #555;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .timer div {
+      background: linear-gradient(135deg, #ff99cc, #66ccff);
       color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      padding: 15px 20px;
+      border-radius: 10px;
+      min-width: 80px;
+      font-weight: bold;
     }
 
-    .buttons-container {
-      text-align: center;
-      padding: 40px 20px;
-      background: url('floral-background.jpg.jpg') no-repeat center center;
-      background-size: cover;
+    .venue {
+      font-size: 1.1em;
+      margin: 20px 0;
     }
 
-    .buttons-container a {
+    .qr {
+      margin: 20px auto;
+      width: 150px;
+      height: 150px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 14px 36px;
+      padding: 12px 30px;
       background: linear-gradient(135deg, #ff99cc, #66ccff);
-      color: white;
-      font-weight: bold;
-      font-size: 1.05em;
-      border-radius: 50px;
+      color: #fff;
       text-decoration: none;
-      transition: all 0.3s ease;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
-    .buttons-container a:hover {
-      opacity: 0.9;
+    .buttons a:hover {
+      opacity: 0.8;
       transform: scale(1.05);
+    }
+
+    .family {
+      margin-top: 30px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #b30059;
     }
 
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25D366;
+      background: #25D366;
       color: white;
       border-radius: 50%;
-      width: 55px;
-      height: 55px;
+      width: 60px;
+      height: 60px;
       text-align: center;
-      font-size: 28px;
-      line-height: 55px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      font-size: 30px;
+      line-height: 60px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 100;
       text-decoration: none;
-      z-index: 1000;
     }
 
-    @media (max-width: 768px) {
-      .hero {
-        height: 85vh;
-      }
-
-      .overlay h1 {
+    @media (max-width: 600px) {
+      h1 {
         font-size: 1.8em;
       }
-
-      .buttons-container {
-        padding: 30px 15px;
+      .tagline {
+        font-size: 1em;
       }
-
-      .buttons-container a {
-        font-size: 0.95em;
-        padding: 12px 26px;
+      .timer {
+        flex-direction: column;
+        gap: 10px;
       }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        height: 80vh;
-      }
-
-      .overlay {
-        top: 60%;
-      }
-
-      .overlay h1 {
-        font-size: 1.6em;
-      }
-
-      .buttons-container {
-        padding: 25px 10px;
-      }
-
-      .buttons-container a {
-        font-size: 0.9em;
+      .buttons a {
         padding: 10px 20px;
+        font-size: 0.9em;
+      }
+      .venue {
+        font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <img src="Main Photo.jpeg" alt="Manthan & Shreya">
-    <div class="overlay">
-      <h1>Manthan Jhaveri & Shreya Shah</h1>
-    </div>
+  <h1>Manthan Weds Shreya</h1>
+  <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
+
+  <div class="timer" id="timer">
+    <div><span id="days">0</span><br>Days</div>
+    <div><span id="hours">0</span><br>Hours</div>
+    <div><span id="minutes">0</span><br>Minutes</div>
+    <div><span id="seconds">0</span><br>Seconds</div>
   </div>
 
-  <div class="buttons-container">
-    <a href="story.html">Our Story</a>
-    <a href="our-first-chapter.html">Our First Chapter</a>
-    <a href="invitation.html">View Invitation</a>
+  <div class="venue">
+    <strong>Venue:</strong> Baghban Party Plot<br>
+    Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
   </div>
+
+  <img src="qr-code.png" alt="QR Code for directions" class="qr">
+  <div>Scan for directions</div>
+
+  <div class="buttons">
+    <a href="index.html">Home</a>
+    <a href="https://formspree.io/f/xpwrbdvw">RSVP</a>
+    <a href="invitation.pdf" download>Download Invitation</a>
+  </div>
+
+  <div class="family">Jhaveri & Shah Family Welcomes You!</div>
 
   <a href="https://wa.me/918780003746" target="_blank" class="whatsapp-float">💬</a>
+
+  <script>
+    const targetDate = new Date("2025-11-15T19:00:00").getTime();
+    const timerFunc = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff < 0) {
+        clearInterval(timerFunc);
+        document.getElementById("timer").innerHTML = "<div>It's time to celebrate!</div>";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }, 1000);
+  </script>
 
 </body>
 </html>
