@@ -9,42 +9,60 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center / cover;
+      background: url('https://www.transparenttextures.com/patterns/flowers.png'), #fff8f0;
+      background-repeat: repeat;
       color: #333;
       text-align: center;
       padding: 30px;
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.9);
       padding: 30px;
       border-radius: 15px;
-      max-width: 700px;
+      max-width: 750px;
       margin: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin-bottom: 5px;
       color: #b30059;
     }
 
     .tagline {
       font-style: italic;
-      font-size: 1.2em;
+      font-size: 1.3em;
       color: #555;
       margin-bottom: 20px;
     }
 
     .timer {
-      font-size: 1.5em;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
       margin: 20px 0;
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 30px;
+      flex-wrap: wrap;
+    }
+
+    .time-box {
       background: linear-gradient(45deg, #b30059, #ff66a3);
       color: #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      min-width: 70px;
+    }
+
+    .time-box .value {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .time-box .label {
+      font-size: 0.8em;
+      text-transform: uppercase;
     }
 
     .venue {
@@ -77,8 +95,8 @@
 
     .footer {
       margin-top: 30px;
-      font-weight: bold;
-      font-size: 1.2em;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
       color: #b30059;
     }
   </style>
@@ -88,7 +106,24 @@
     <h1>Manthan Jhaveri & Shreya Shah</h1>
     <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
-    <div class="timer" id="countdown">Loading timer...</div>
+    <div class="timer" id="countdown">
+      <div class="time-box">
+        <div class="value" id="days">0</div>
+        <div class="label">Days</div>
+      </div>
+      <div class="time-box">
+        <div class="value" id="hours">0</div>
+        <div class="label">Hours</div>
+      </div>
+      <div class="time-box">
+        <div class="value" id="minutes">0</div>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="time-box">
+        <div class="value" id="seconds">0</div>
+        <div class="label">Seconds</div>
+      </div>
+    </div>
 
     <div class="venue">
       <strong>Venue:</strong> Baghban Party Plot<br/>
@@ -108,15 +143,12 @@
     </div>
 
     <div class="footer">
-      JHAVERI & SHAH Family Welcomes You!
+      💐 JHAVERI & SHAH Family Welcomes You 💐
     </div>
   </div>
 
   <script>
-    // Countdown timer
     const targetDate = new Date("2025-11-15T19:00:00").getTime();
-
-    const countdownEl = document.getElementById("countdown");
 
     setInterval(() => {
       const now = new Date().getTime();
@@ -127,11 +159,11 @@
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
 
-      if (distance < 0) {
-        countdownEl.innerHTML = "The celebration has begun!";
-      }
     }, 1000);
   </script>
 </body>
