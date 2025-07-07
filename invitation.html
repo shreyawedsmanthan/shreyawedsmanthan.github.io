@@ -15,18 +15,21 @@
       text-align: center;
       padding: 20px;
     }
+
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5em;
       color: #b30059;
       margin-bottom: 0.3em;
     }
+
     .tagline {
       font-style: italic;
       font-size: 1.2em;
       margin-bottom: 1em;
       color: #555;
     }
+
     .timer {
       display: flex;
       justify-content: center;
@@ -34,6 +37,7 @@
       margin: 20px 0;
       flex-wrap: wrap;
     }
+
     .timer div {
       background: linear-gradient(135deg, #ff99cc, #66ccff);
       color: #fff;
@@ -42,18 +46,22 @@
       min-width: 80px;
       font-weight: bold;
     }
+
     .venue {
       font-size: 1.1em;
       margin: 20px 0;
     }
+
     .qr {
       margin: 20px auto;
       width: 150px;
       height: 150px;
     }
+
     .buttons {
       margin-top: 20px;
     }
+
     .buttons a {
       display: inline-block;
       margin: 10px;
@@ -65,10 +73,12 @@
       font-weight: bold;
       transition: 0.3s;
     }
+
     .buttons a:hover {
       opacity: 0.8;
       transform: scale(1.05);
     }
+
     .family {
       margin-top: 30px;
       font-family: 'Playfair Display', serif;
@@ -76,6 +86,7 @@
       font-weight: bold;
       color: #b30059;
     }
+
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -97,17 +108,21 @@
       h1 {
         font-size: 1.8em;
       }
+
       .tagline {
         font-size: 1em;
       }
+
       .timer {
         flex-direction: column;
         gap: 10px;
       }
+
       .buttons a {
         padding: 10px 20px;
         font-size: 0.9em;
       }
+
       .venue {
         font-size: 1em;
       }
@@ -116,7 +131,9 @@
 </head>
 <body>
 
-  <h1>Manthan Jhaveri Weds Shreya Shah</h1>
+  <!-- ✅ Updated Title -->
+  <h1>Manthan Weds Shreya</h1>
+
   <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
   <div class="timer" id="timer">
@@ -131,7 +148,7 @@
     Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
   </div>
 
-  <!-- ✅ Use your uploaded QR image file -->
+  <!-- ✅ QR Code image file (use your uploaded QR image named 'qr-code.png') -->
   <img src="qr-code.png" alt="QR Code for directions" class="qr">
   <div>Scan for directions</div>
 
@@ -143,8 +160,10 @@
 
   <div class="family">Jhaveri & Shah Family Welcomes You!</div>
 
+  <!-- ✅ WhatsApp Chat -->
   <a href="https://wa.me/918780003746" target="_blank" class="whatsapp-float">💬</a>
 
+  <!-- ✅ Timer Countdown Script -->
   <script>
     const targetDate = new Date("2025-11-15T19:00:00").getTime();
     const timerFunc = setInterval(() => {
@@ -168,5 +187,6 @@
       document.getElementById("seconds").innerText = seconds;
     }, 1000);
   </script>
+
 </body>
 </html>
