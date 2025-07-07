@@ -9,35 +9,47 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #fff;
+      background: #fdf6f9;
       color: #333;
-      text-align: center;
     }
 
     .hero {
       position: relative;
+      width: 100%;
+      text-align: center;
     }
 
     .hero img {
       width: 100%;
       max-height: 500px;
       object-fit: cover;
+      filter: brightness(70%);
     }
 
     .overlay {
       position: absolute;
-      top: 50%;
-      left: 5%;
-      transform: translateY(-50%);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 30px;
       color: white;
+    }
+
+    .overlay h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2em;
-      text-align: left;
-      padding: 10px 20px;
+      font-size: 2.5em;
+      margin: 0;
+      background: none;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
 
     .buttons-container {
-      margin: 30px 0;
+      text-align: center;
+      padding: 30px 20px;
     }
 
     .buttons-container a {
@@ -75,14 +87,19 @@
       z-index: 1000;
     }
 
+    /* Mobile responsive */
     @media (max-width: 600px) {
       .overlay {
+        padding-left: 15px;
+        justify-content: flex-start;
+      }
+
+      .overlay h1 {
         font-size: 1.5em;
-        left: 10px;
       }
 
       .buttons-container a {
-        padding: 12px 28px;
+        padding: 12px 24px;
         font-size: 0.95em;
       }
     }
@@ -92,7 +109,9 @@
 
   <div class="hero">
     <img src="Main Photo.jpeg" alt="Manthan & Shreya">
-    <div class="overlay">Manthan Jhaveri & Shreya Shah</div>
+    <div class="overlay">
+      <h1>Manthan Jhaveri & Shreya Shah</h1>
+    </div>
   </div>
 
   <div class="buttons-container">
