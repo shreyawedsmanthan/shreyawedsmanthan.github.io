@@ -15,21 +15,18 @@
       text-align: center;
       padding: 20px;
     }
-
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5em;
       color: #b30059;
       margin-bottom: 0.3em;
     }
-
     .tagline {
       font-style: italic;
       font-size: 1.2em;
       margin-bottom: 1em;
       color: #555;
     }
-
     .timer {
       display: flex;
       justify-content: center;
@@ -37,7 +34,6 @@
       margin: 20px 0;
       flex-wrap: wrap;
     }
-
     .timer div {
       background: linear-gradient(135deg, #ff99cc, #66ccff);
       color: #fff;
@@ -45,31 +41,22 @@
       border-radius: 10px;
       min-width: 80px;
       font-weight: bold;
-      font-size: 1em;
     }
-
     .venue {
       font-size: 1.1em;
       margin: 20px 0;
-      line-height: 1.6;
     }
-
     .qr {
       margin: 20px auto;
       width: 150px;
       height: 150px;
     }
-
     .buttons {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      margin-top: 20px;
     }
-
     .buttons a {
       display: inline-block;
+      margin: 10px;
       padding: 12px 30px;
       background: linear-gradient(135deg, #ff99cc, #66ccff);
       color: #fff;
@@ -78,12 +65,10 @@
       font-weight: bold;
       transition: 0.3s;
     }
-
     .buttons a:hover {
-      opacity: 0.85;
+      opacity: 0.8;
       transform: scale(1.05);
     }
-
     .family {
       margin-top: 30px;
       font-family: 'Playfair Display', serif;
@@ -91,7 +76,6 @@
       font-weight: bold;
       color: #b30059;
     }
-
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -99,34 +83,24 @@
       background: #25D366;
       color: white;
       border-radius: 50%;
-      width: 55px;
-      height: 55px;
+      width: 60px;
+      height: 60px;
       text-align: center;
-      font-size: 28px;
-      line-height: 55px;
+      font-size: 30px;
+      line-height: 60px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       z-index: 100;
       text-decoration: none;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 600px) {
       h1 {
-        font-size: 2em;
+        font-size: 1.8em;
       }
-
-      .timer div {
-        min-width: 70px;
-        font-size: 0.9em;
-      }
-
-      .qr {
-        width: 120px;
-        height: 120px;
-      }
-
       .buttons a {
         padding: 10px 20px;
-        font-size: 0.95em;
+        font-size: 0.9em;
       }
     }
   </style>
@@ -144,10 +118,8 @@
   </div>
 
   <div class="venue">
-    <strong>Venue:</strong><br>
-    Baghban Party Plot<br>
-    Thaltej - Shilaj Rd, near Silver Square, Thaltej,<br>
-    Ahmedabad, Gujarat - 380059
+    <strong>Venue:</strong> Baghban Party Plot<br>
+    Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
   </div>
 
   <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://goo.gl/maps/38fBStTyr5J9VctF8" alt="QR Code for directions" class="qr">
@@ -155,7 +127,7 @@
 
   <div class="buttons">
     <a href="index.html">Home</a>
-    <a href="https://formspree.io/f/xpwrbdvw" target="_blank">RSVP</a>
+    <a href="https://formspree.io/f/xpwrbdvw">RSVP</a>
     <a href="invitation.pdf" download>Download Invitation</a>
   </div>
 
