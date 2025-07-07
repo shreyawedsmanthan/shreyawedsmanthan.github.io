@@ -13,37 +13,30 @@
       background-attachment: fixed;
       color: #333;
     }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      text-align: center;
-    }
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 2.5em;
-      margin-bottom: 0.2em;
+      text-align: center;
+      margin: 20px 0 10px;
     }
     h2 {
       font-size: 1em;
       font-weight: 500;
-      margin: 0.5em 0;
+      text-align: center;
+      margin: 0 0 20px;
     }
     .countdown {
+      text-align: center;
       background: #f8bbd0;
       display: inline-block;
       padding: 10px 20px;
       border-radius: 10px;
-      margin: 10px 0;
+      margin: 10px auto;
     }
     .venue {
       font-size: 0.9em;
-    }
-    .buttons {
-      margin-top: 15px;
+      text-align: center;
+      margin-bottom: 20px;
     }
     .button {
       background: linear-gradient(45deg, #f06292, #ba68c8);
@@ -51,7 +44,7 @@
       border: none;
       padding: 10px 20px;
       border-radius: 25px;
-      margin: 5px;
+      margin: 10px;
       font-size: 1em;
       cursor: pointer;
       text-decoration: none;
@@ -67,36 +60,46 @@
       width: 50px;
       height: 50px;
     }
+    iframe {
+      width: 90%;
+      display: block;
+      margin: 20px auto;
+      border: 0;
+      border-radius: 10px;
+    }
+    .invitation-img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
     .download-icon {
       width: 40px;
       height: 40px;
       vertical-align: middle;
     }
-    iframe {
-      width: 100%;
-      border: 0;
-      border-radius: 10px;
-    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Manthan weds Shreya</h1>
-    <h2>#IPOOfLove — Launching on 15th Nov 2025</h2>
-    <div class="countdown">131 days | 5 hrs | 0 min | 11 sec</div>
-    <p class="venue">
-      Venue: Baghban Party Plot <br />
-      Thaltej - Shilaj Rd, near Silver Square, Thaltej,<br />
-      Ahmedabad, Gujarat - 380059
-    </p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5284931456347!2d72.511792875131!3d23.07847077913469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84b8df4f5d05%3A0x2b1b1e6f8a9a71f0!2sBaghban%20Party%20Plot!5e0!3m2!1sen!2sin!4v1686319600000!5m2!1sen!2sin" height="250" allowfullscreen=""></iframe>
-    <div class="buttons">
-      <a href="#rsvp" class="button">RSVP</a>
-      <a href="index.html" class="button">Home</a>
-      <a href="invitation.pdf" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Download Invitation" class="download-icon" />
-      </a>
-    </div>
+  <h1>Manthan weds Shreya</h1>
+  <h2>#IPOOfLove — Launching on 15th Nov 2025</h2>
+  <div class="countdown">131 days | 5 hrs | 0 min | 11 sec</div>
+  <img src="invitation_image.jpg" alt="Wedding Invitation" class="invitation-img" />
+  <p class="venue">
+    Venue: Baghban Party Plot <br />
+    Thaltej - Shilaj Rd, near Silver Square, Thaltej,<br />
+    Ahmedabad, Gujarat - 380059
+  </p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5284931456347!2d72.511792875131!3d23.07847077913469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84b8df4f5d05%3A0x2b1b1e6f8a9a71f0!2sBaghban%20Party%20Plot!5e0!3m2!1sen!2sin!4v1686319600000!5m2!1sen!2sin" height="250" allowfullscreen=""></iframe>
+  <div class="buttons">
+    <a href="#rsvp" class="button">RSVP</a>
+    <a href="index.html" class="button">Home</a>
+    <a href="invitation.pdf" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg" alt="Download Invitation" class="download-icon" />
+    </a>
   </div>
   <a href="https://wa.me/919999999999" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" class="whatsapp-icon" />
