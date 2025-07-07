@@ -4,129 +4,181 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wedding Invitation - Manthan & Shreya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background: url('floral-background.jpg.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
-      text-align: center;
+      color: #2d2d2d;
     }
+
     .container {
-      background-color: rgba(0,0,0,0.5);
+      text-align: center;
       padding: 20px;
-      min-height: 100vh;
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 30px auto;
+      border-radius: 20px;
+      max-width: 700px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
+
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
+      font-size: 2.2em;
+      margin-bottom: 10px;
     }
-    .timer {
+
+    .countdown {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin-bottom: 1em;
-      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
     }
-    .time-box {
-      background: rgba(255, 192, 203, 0.3);
-      padding: 10px 15px;
+
+    .countdown div {
+      background: #f4c2c2;
+      padding: 15px;
       border-radius: 10px;
+      font-size: 1.2em;
+      min-width: 60px;
     }
-    .time-box span {
-      display: block;
-      font-size: 1.5em;
-      font-weight: bold;
+
+    .venue {
+      margin: 20px 0;
     }
-    .buttons {
-      margin: 1em 0;
+
+    .venue p {
+      margin: 5px 0;
+      font-weight: 500;
     }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 5px;
-      background: #ff69b4;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .button:hover {
-      background: #ff1493;
-    }
+
     .qr {
-      margin-top: 1em;
+      margin: 20px 0;
     }
+
+    .qr img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .welcome {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      margin-top: 25px;
+      font-weight: bold;
+      color: #b03c6f;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .buttons a {
+      padding: 12px 20px;
+      background-color: #ff85a2;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #d96b8a;
+    }
+
     .download-icon {
-      margin-top: 1em;
+      margin-top: 20px;
     }
+
     .download-icon img {
-      width: 40px;
-      vertical-align: middle;
+      width: 35px;
+      cursor: pointer;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp img {
+      width: 45px;
+    }
+
+    @media (max-width: 600px) {
+      .countdown {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .container {
+        margin: 15px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Manthan Jhaveri & Shreya Shah</h1>
-    <p>#IPOOfLove – Launching on 15th Nov 2025</p>
+    <h1>You are invited to the Wedding of</h1>
+    <h1>Manthan & Shreya</h1>
     
-    <div class="timer">
-      <div class="time-box"><span id="days">00</span>Days</div>
-      <div class="time-box"><span id="hours">00</span>Hours</div>
-      <div class="time-box"><span id="minutes">00</span>Minutes</div>
-      <div class="time-box"><span id="seconds">00</span>Seconds</div>
+    <div class="countdown" id="countdown">
+      <div><span id="days">00</span><br>Days</div>
+      <div><span id="hours">00</span><br>Hours</div>
+      <div><span id="minutes">00</span><br>Minutes</div>
+      <div><span id="seconds">00</span><br>Seconds</div>
     </div>
 
-    <p><strong>Venue:</strong> Baghban Party Plot</p>
-    <p>Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059</p>
+    <div class="venue">
+      <p><strong>Venue:</strong> Baghban Party Plot</p>
+      <p>Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad</p>
+      <p><strong>Date & Time:</strong> 15th November 2025 | 7:00 PM onwards</p>
+    </div>
 
     <div class="qr">
-      <img src="qr-code.png" alt="Venue QR Code" width="150">
-    </div>
-
-    <div class="buttons">
-      <a href="index.html" class="button">Home</a>
-      <a href="rsvp.html" class="button">RSVP</a>
-    </div>
-
-    <div class="download-icon">
-      <a href="invitation.pdf" download>
-        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Download Invitation PDF">
+      <p>Scan for Directions</p>
+      <a href="https://g.co/kgs/e4XsELN" target="_blank">
+        <img src="qr-code.png" alt="QR Code for Venue">
       </a>
     </div>
 
-    <p style="font-family: 'Playfair Display', serif; font-size: 1.5em; margin-top: 1em;">
-      <strong>Jhaveri & Shah Family Welcomes You!</strong>
-    </p>
+    <div class="welcome">JHAVERI & SHAH FAMILY WELCOMES YOU!</div>
+
+    <div class="buttons">
+      <a href="index.html">Home</a>
+      <a href="invitation.pdf" target="_blank">Download Invitation</a>
+    </div>
+  </div>
+
+  <div class="whatsapp">
+    <a href="https://wa.me/919999999999" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
   </div>
 
   <script>
-    const weddingDate = new Date("Nov 15, 2025 19:00:00").getTime();
-    const x = setInterval(function() {
+    const countDownDate = new Date("Nov 15, 2025 19:00:00").getTime();
+    const x = setInterval(function () {
       const now = new Date().getTime();
-      const distance = weddingDate - now;
+      const distance = countDownDate - now;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("days").innerText = String(days).padStart(2, '0');
-      document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-      document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-      document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-
-      if (distance < 0) {
-        clearInterval(x);
-        document.querySelector(".timer").innerHTML = "🎉 It's Wedding Time! 🎉";
-      }
-    }, 1000);
-  </script>
-</body>
-</html>
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes")
