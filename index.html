@@ -9,15 +9,13 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('floral-background.jpg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
+      background-color: #fff;
+      color: #333;
       text-align: center;
     }
 
     .hero {
       position: relative;
-      text-align: center;
     }
 
     .hero img {
@@ -28,19 +26,14 @@
 
     .overlay {
       position: absolute;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
-
-    .overlay h1 {
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      color: white;
       font-family: 'Playfair Display', serif;
       font-size: 2.2em;
-      margin: 0;
-      color: #fff;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      text-align: left;
+      padding: 10px 20px;
     }
 
     .buttons-container {
@@ -83,8 +76,9 @@
     }
 
     @media (max-width: 600px) {
-      .overlay h1 {
+      .overlay {
         font-size: 1.5em;
+        left: 10px;
       }
 
       .buttons-container a {
@@ -98,9 +92,7 @@
 
   <div class="hero">
     <img src="Main Photo.jpeg" alt="Manthan & Shreya">
-    <div class="overlay">
-      <h1>Manthan Jhaveri & Shreya Shah</h1>
-    </div>
+    <div class="overlay">Manthan Jhaveri & Shreya Shah</div>
   </div>
 
   <div class="buttons-container">
