@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our First Chapter - Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <style>
     body {
       margin: 0;
@@ -12,36 +13,32 @@
       background: url('floral-background.jpg.jpg') no-repeat center center fixed;
       background-size: cover;
       color: #333;
-      padding: 15px;
     }
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2em;
       color: #b30059;
       text-align: center;
-      margin-bottom: 0.5em;
+      padding: 20px 10px;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      max-width: 1000px;
-      margin: auto;
+    .swiper {
+      width: 90%;
+      max-width: 800px;
+      height: auto;
+      padding-bottom: 50px;
     }
-    .gallery img {
+    .swiper-slide {
+      text-align: center;
+    }
+    .swiper-slide img {
       width: 100%;
       border-radius: 8px;
-      cursor: pointer;
       border: 3px solid #fff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
     }
     .buttons {
       text-align: center;
-      margin: 20px 0;
+      margin: 10px 0 30px;
     }
     .buttons a {
       display: inline-block;
@@ -59,49 +56,47 @@
       transform: scale(1.05);
     }
   </style>
-  <!-- Lightbox CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 
   <h1>Our First Chapter</h1>
 
-  <div class="gallery">
-    <a href="image1.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 1">
-      <img src="image1.jpeg" alt="Our Memory 1">
-    </a>
-    <a href="image2.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 2">
-      <img src="image2.jpeg" alt="Our Memory 2">
-    </a>
-    <a href="image3.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 3">
-      <img src="image3.jpeg" alt="Our Memory 3">
-    </a>
-    <a href="image4.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 4">
-      <img src="image4.jpeg" alt="Our Memory 4">
-    </a>
-    <a href="image5.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 5">
-      <img src="image5.jpeg" alt="Our Memory 5">
-    </a>
-    <a href="image6.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 6">
-      <img src="image6.jpeg" alt="Our Memory 6">
-    </a>
-    <a href="image7.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 7">
-      <img src="image7.jpeg" alt="Our Memory 7">
-    </a>
-    <a href="image8.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 8">
-      <img src="image8.jpeg" alt="Our Memory 8">
-    </a>
-    <a href="image9.jpeg" data-lightbox="wedding-gallery" data-title="Our Memory 9">
-      <img src="image9.jpeg" alt="Our Memory 9">
-    </a>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="image1.jpeg" alt="Our Memory 1"></div>
+      <div class="swiper-slide"><img src="image2.jpeg" alt="Our Memory 2"></div>
+      <div class="swiper-slide"><img src="image3.jpeg" alt="Our Memory 3"></div>
+      <div class="swiper-slide"><img src="image4.jpeg" alt="Our Memory 4"></div>
+      <div class="swiper-slide"><img src="image5.jpeg" alt="Our Memory 5"></div>
+      <div class="swiper-slide"><img src="image6.jpeg" alt="Our Memory 6"></div>
+      <div class="swiper-slide"><img src="image7.jpeg" alt="Our Memory 7"></div>
+      <div class="swiper-slide"><img src="image8.jpeg" alt="Our Memory 8"></div>
+      <div class="swiper-slide"><img src="image9.jpeg" alt="Our Memory 9"></div>
+    </div>
+    <!-- Pagination and arrows -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 
   <div class="buttons">
     <a href="index.html">Home</a>
   </div>
 
-  <!-- Lightbox JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
 
 </body>
 </html>
