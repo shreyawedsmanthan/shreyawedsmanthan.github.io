@@ -10,7 +10,8 @@
       margin: 0;
       font-family: 'Roboto', sans-serif;
       color: #333;
-      background: #fdf6f9;
+      background: url('floral-background.jpg.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
     .hero {
@@ -21,7 +22,7 @@
     .hero img {
       width: 100%;
       height: auto;
-      max-height: 100vh;
+      max-height: 90vh;
       object-fit: cover;
       display: block;
       filter: brightness(70%);
@@ -47,8 +48,6 @@
     .buttons-container {
       text-align: center;
       padding: 40px 20px;
-      background: url('floral-background.jpg.jpg') no-repeat center;
-      background-size: cover;
     }
 
     .buttons-container a {
@@ -97,12 +96,23 @@
       }
 
       .overlay h1 {
-        font-size: 1.5em;
+        font-size: 1.6em;
+      }
+
+      .buttons-container a {
+        font-size: 1em;
+        padding: 12px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .overlay h1 {
+        font-size: 1.4em;
       }
 
       .buttons-container a {
         font-size: 0.95em;
-        padding: 12px 24px;
+        padding: 10px 20px;
       }
     }
   </style>
