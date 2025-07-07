@@ -18,8 +18,12 @@
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5em;
-      color: #b30059;
+      font-size: 2.8em;
+      background: linear-gradient(90deg, #b30059, #ff99cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+      letter-spacing: 1px;
       margin-bottom: 0.3em;
     }
 
@@ -131,9 +135,7 @@
 </head>
 <body>
 
-  <!-- ✅ Updated Title -->
-  <h1>Manthan Weds Shreya</h1>
-
+  <h1>Manthan Jhaveri Weds Shreya Shah</h1>
   <div class="tagline">#IPOOfLove – Launching on 15th Nov 2025</div>
 
   <div class="timer" id="timer">
@@ -148,7 +150,7 @@
     Thaltej - Shilaj Rd, near Silver Square, Thaltej, Ahmedabad, Gujarat - 380059
   </div>
 
-  <!-- ✅ QR Code image file (use your uploaded QR image named 'qr-code.png') -->
+  <!-- QR Image: Replace qr-code.png with your actual uploaded image file name -->
   <img src="qr-code.png" alt="QR Code for directions" class="qr">
   <div>Scan for directions</div>
 
@@ -160,10 +162,8 @@
 
   <div class="family">Jhaveri & Shah Family Welcomes You!</div>
 
-  <!-- ✅ WhatsApp Chat -->
   <a href="https://wa.me/918780003746" target="_blank" class="whatsapp-float">💬</a>
 
-  <!-- ✅ Timer Countdown Script -->
   <script>
     const targetDate = new Date("2025-11-15T19:00:00").getTime();
     const timerFunc = setInterval(() => {
