@@ -85,8 +85,12 @@
       z-index: 1000;
     }
 
-    /* Responsive */
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
+      .hero img {
+        max-height: 100vh;
+      }
+
       .overlay {
         left: 10px;
         top: auto;
@@ -96,7 +100,12 @@
       }
 
       .overlay h1 {
-        font-size: 1.6em;
+        font-size: 1.8em;
+      }
+
+      .buttons-container {
+        padding-top: 60px;
+        padding-bottom: 40px;
       }
 
       .buttons-container a {
@@ -107,7 +116,11 @@
 
     @media (max-width: 480px) {
       .overlay h1 {
-        font-size: 1.4em;
+        font-size: 1.6em;
+      }
+
+      .buttons-container {
+        padding-top: 80px;
       }
 
       .buttons-container a {
